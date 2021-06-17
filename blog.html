@@ -85,7 +85,6 @@
                 <form id="registerForm" class="registerModalContainer__registerModal__container__emailRegister">
                     <input id="registerEmail" class="registerModalContainer__registerModal__container__emailRegister__emailInput" placeholder="E-mail" type="email" required>
                     <input id="registerPassword" class="registerModalContainer__registerModal__container__emailRegister__passwordInput" placeholder="Password" type="password" required>
-                    <input id="registerPasswordConfirmation" class="registerModalContainer__registerModal__container__emailRegister__confirmPasswordInput" placeholder="Confirm password" type="password" required>
                 </form>
                 <div class="registerModalContainer__registerModal__container__socialMediaRegister">
                     <a class="registerModalContainer__registerModal__container__socialMediaRegister__continueWithGoogleButton" href="">
@@ -105,37 +104,4 @@
     </div>
 </body>
 <script src="./scripts/modals.js"></script>
-
-<!--Authentication-->
-<script src="./scripts/authentication.js"></script>
-
-
-
-
-<!--Firebase scripts-->
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
-
-<script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyACvmvwcOOI7jH3Q_8qiUTiKQhSdoxmdc0",
-    authDomain: "mblog-d3dbb.firebaseapp.com",
-    databaseURL: "https://mblog-d3dbb-default-rtdb.firebaseio.com",
-    projectId: "mblog-d3dbb",
-    storageBucket: "mblog-d3dbb.appspot.com",
-    messagingSenderId: "956217733914",
-    appId: "1:956217733914:web:49ba288ea7c03b5e5032a3",
-    measurementId: "G-717XVR5BJL"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
-
 </html>

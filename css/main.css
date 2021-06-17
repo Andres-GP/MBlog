@@ -555,7 +555,7 @@ footer p {
 
 .registerModalContainer__registerModal__container__emailRegister__emailInput{
     font-family: 'Roboto', sans-serif;
-    margin-top: 60px;
+    margin-top: 90px;
     border: none;
     appearance: none;
     width: 230px;
@@ -633,31 +633,6 @@ footer p {
 }
 
 
-.registerModalContainer__registerModal__container__emailRegister__confirmPasswordInput{
-  font-family: 'Roboto', sans-serif;
-  margin-top: 40px;
-  border: none;
-  appearance: none;
-  width: 230px;
-  margin-left: 48px;
-  background-color: #001935;
-  font-size: 14px;
-  outline: none;
-  padding-bottom: 6px;
-  background: 
-  linear-gradient(90deg, #4b6179c4, #4b6179c4) left bottom/100% 1.5px no-repeat;
-}
-.registerModalContainer__registerModal__container__emailRegister__confirmPasswordInput:focus::placeholder{
-  color: transparent;
-}
-.registerModalContainer__registerModal__container__emailRegister__confirmPasswordInput::placeholder{
-  color: #4b6179d3;
-  transition: color 0.2s ease;
-}
-.registerModalContainer__registerModal__container__emailRegister__confirmPasswordInput[type=password] {
-  color: #4b6179d3;  
-  
-}
 
 
 
@@ -754,4 +729,7 @@ footer p {
     height: 45px;
     border-radius: 20px;
     margin-right: 16px;
+}
+.registerModalContainer__registerModal__container__container__registerButton:hover{
+    cursor: pointer;
 }
