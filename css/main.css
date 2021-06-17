@@ -1,0 +1,757 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto+Slab:400,700|Roboto:400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+a {
+    text-decoration: none;
+    display: inline;
+    color: black;
+}
+.home-body {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.grid-container {
+    max-width: 980px;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Header*/
+
+header {
+    width: 100%;
+    height: 78px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+header .header__container {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #001935;
+    justify-content: space-between;
+    
+}
+
+header .header__container__logo{
+    margin-left: 20px;
+    
+}
+header .header-icons-container .header__container__icons {
+    margin-top: 10px;
+    width: 250px;
+    height: auto;
+    display: flex;
+    justify-items: flex-start;
+    justify-content: space-between;
+    justify-self: end;
+}
+.header__container__icons{
+    margin-right: 25px;
+}
+header .header__container__icons span {
+    color: white;
+}
+.headerBottomPadding{
+    margin-top: 78px;
+    width: 100%;
+    height: 3px;
+    background-color: #21374F;
+    position: absolute;
+    z-index: 5;
+}
+
+
+
+
+
+/*Home Page*/
+
+
+.home {
+    flex: 1;
+    grid-template-columns: 1fr 4fr 1fr;
+    height: 100%;
+    background-image: url('../assets/img/BackgroundCover.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: calc(100vh - 78px - 115px);
+    align-items: center;
+}
+.home__container{
+    height: 100%;
+}
+.home section {
+    height: 100%;
+    display: grid;
+    grid-column: 2;
+    justify-items: center;
+    height: 600px;
+    margin-top: 80px;
+}
+.home__container__section__text {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 13%;
+    font-size: 65px;
+    font-weight: 1000;
+    text-align: center;
+    color: white;
+}
+
+.home__container__section__button{
+    margin-bottom: 220px;
+    background-color: #FEBC12; 
+    border: none;
+    color: white;
+    text-align: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 16;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 0px 4px 15px 5px #00000025;
+    padding-top: 17px;
+    width: 270px;
+    height: 36px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*blog post loged out page*/
+
+
+
+/*Header*/
+
+header .headerBlog__logoContainer {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #001935;
+    justify-content: space-between;
+}
+.headerBlog__buttonContainer__button{
+    background-color: #FEBC12; 
+    border: none;
+    color: white;
+    text-align: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 13px;
+    display: inline-block;
+    box-shadow: 0px 4px 15px 5px #00000025;
+    width: 140px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 16px;
+}
+.headerBlog__buttonContainer__button:hover{
+    cursor: pointer;
+}
+
+header .headerBlog__logoContainer__logo{
+    margin-left: 20px;
+    
+}
+.headerBlogBottomPadding{
+    margin-top: 78px;
+    width: 100%;
+    height: 3px;
+    background-color: #21374F;
+    position: absolute;
+    z-index: 5;
+}
+
+
+
+.blogMain {
+    min-height: calc(100vh - 78px - 115px);
+    background-color: #001935;
+}
+/*shared footer*/
+.footer__text{
+    padding-left: 9%;
+    padding-right: 9%;
+}
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: #001935;
+    border-top: 35px solid #47cfac;
+    text-align: center;
+}
+footer p {
+    color: white;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*modals*/
+
+  /*Login modal*/
+  .loginModalContainer{
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(0, 0, 0, 0.048);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+}
+.loginModalContainer-active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.loginModalContainer__loginModal{
+    margin: 10px;
+    background-color: #001935;
+    width: 400px;
+    height: 620px;
+    border-radius: 60px;
+    box-shadow: 0px 50px 30px 1px #0000002c;
+}
+
+.loginModalContainer__loginModal__container{
+    width: 330px;
+    height: 550px;
+    background-color: #001935;
+    margin-left: 34px;
+    margin-top: 33px;
+    border-radius: 30px;
+    border-color: #21374F;
+    border-style: solid;
+    border-width: 2px;
+}
+.loginModalContainer__modalClose{
+    font-family: 'Roboto', sans-serif;
+    color: #4b6179c4;
+    position: relative;
+    margin-bottom: 600px;
+    font-size: large;
+    box-shadow: 0px 4px 15px 5px #00000004;
+}
+.loginModalContainer__modalClose:hover{
+    cursor: pointer;
+}
+.loginModalContainer__loginModal__container__login{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px #21374F solid;
+}
+
+.loginModalContainer__loginModal__container__emailLoginInput{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 60px;
+    border: none;
+    appearance: none;
+    width: 230px;
+    margin-left: 48px;
+    background-color: #001935;
+    font-size: 14px;
+    outline: none;
+    padding-bottom: 6px;
+    background: 
+    linear-gradient(90deg, #4b6179c4, #4b6179c4) left bottom/100% 1.5px no-repeat;
+}
+.loginModalContainer__loginModal__container__emailLoginInput:focus::placeholder{
+    color: transparent;
+}
+.loginModalContainer__loginModal__container__emailLoginInput::placeholder{
+    color: #4b6179d3;
+    transition: color 0.2s ease;
+}
+.loginModalContainer__loginModal__container__emailLoginInput[type=email] {
+    color: #4b6179d3; 
+    font-family: 'Roboto', sans-serif; 
+}
+
+.loginModalContainer__loginModal__container__passwordLoginInput{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 40px;
+    border: none;
+    appearance: none;
+    width: 230px;
+    margin-left: 48px;
+    background-color: #001935;
+    font-size: 14px;
+    outline: none;
+    padding-bottom: 6px;
+    background: 
+    linear-gradient(90deg, #4b6179c4, #4b6179c4) left bottom/100% 1.5px no-repeat;
+}
+.loginModalContainer__loginModal__container__passwordLoginInput:focus::placeholder{
+    color: transparent;
+}
+.loginModalContainer__loginModal__container__passwordLoginInput::placeholder{
+    color: #4b6179d3;
+    transition: color 0.2s ease;
+}
+.loginModalContainer__loginModal__container__passwordLoginInput[type=password] {
+    color: #4b6179d3;  
+    
+}
+
+
+.loginModalContainer__loginModal__container__loginButton{
+    margin-top: 40px;
+    margin-left: 95px;
+    padding-top: 15px;
+    background-color: #FEBC12; 
+    border: none;
+    color: white;
+    text-align: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 13px;
+    display: inline-block;
+    box-shadow: 0px 4px 15px 5px #00000025;
+    width: 140px;
+    height: 30px;
+    border-radius: 20px;
+    margin-right: 16px;
+}
+
+
+/*Continue with Google/Facebook*/
+.loginModalContainer__loginModal__container__socialMediaLogin{
+    width: 100%;
+    height: 145px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px #21374F solid;
+}
+.loginModalContainer__loginModal__container__socialMediaLogin__continueWithGoogleButton{
+    margin-top: 21px;
+    margin-left: 40px;
+    padding-top: 2px;
+    background-color: white; 
+    border: none;
+    color: black;
+    text-align: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 13px;
+    box-shadow: 0px 4px 15px 5px #00000025;
+    width: 255px;
+    height: 47px;
+    border-radius: 20px;
+    margin-right: 16px;
+    display: flex;
+    flex-direction: row;
+}
+.loginModalContainer__loginModal__container__socialMediaLogin__continueWithGoogleButton img{
+    margin-top: 2px;
+    margin-left: 38px;
+}
+.loginModalContainer__loginModal__container__socialMediaLogin__continueWithGoogleButton div{
+    margin-left: 5px;
+    font-size: 14px;
+    width: 150px;
+    margin-top: 1px;
+}
+
+.loginModalContainer__loginModal__container__socialMediaLogin__continueWithFacebookButton{
+    margin-top: 15px;
+    margin-left: 40px;
+    padding-top: 2px;
+    background-color: white; 
+    border: none;
+    color: black;
+    text-align: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 13px;
+    box-shadow: 0px 4px 15px 5px #00000025;
+    width: 255px;
+    height: 47px;
+    border-radius: 20px;
+    margin-right: 16px;
+    display: flex;
+    flex-direction: row;
+}
+.loginModalContainer__loginModal__container__socialMediaLogin__continueWithFacebookButton img{
+    margin-left: 33px;
+}
+.loginModalContainer__loginModal__container__socialMediaLogin__continueWithFacebookButton div{
+    margin-left: 12px;
+    font-size: 14px;
+    width: 150px;
+    margin-top: 1px;
+}
+
+
+
+/*Create an account*/
+.loginModalContainer__loginModal__container__createAnAccount{
+    display: flex;
+    flex-direction: column;
+}
+.loginModalContainer__loginModal__container__text{
+    margin-top: 30px;
+    color: #4b6179d3; 
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 103px;
+}
+.loginModalContainer__loginModal__container__createAnAccountButton{
+    margin-top: 8px;
+    margin-left: 35px;
+    padding-top: 0px;
+    background-color: #FEBC12; 
+    border: none;
+    color: white;
+    text-align: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 13px;
+    display: inline-block;
+    box-shadow: 0px 4px 15px 5px #00000025;
+    width: 255px;
+    height: 45px;
+    border-radius: 20px;
+    margin-right: 16px;
+}
+.loginModalContainer__loginModal__container__createAnAccountButton:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+  /*Register modal*/
+
+  .registerModalContainer{
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(0, 0, 0, 0.048);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+}
+.registerModalContainer-active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.registerModalContainer__registerModal{
+    margin: 10px;
+    background-color: #001935;
+    width: 400px;
+    height: 620px;
+    border-radius: 60px;
+    box-shadow: 0px 50px 30px 1px #0000002c;
+}
+
+.registerModalContainer__registerModal__container{
+    width: 330px;
+    height: 550px;
+    background-color: #001935;
+    margin-left: 34px;
+    margin-top: 33px;
+    border-radius: 30px;
+    border-color: #21374F;
+    border-style: solid;
+    border-width: 2px;
+}
+.registerModalContainer__modalClose{
+    font-family: 'Roboto', sans-serif;
+    color: #4b6179c4;
+    position: relative;
+    margin-bottom: 600px;
+    font-size: large;
+    box-shadow: 0px 4px 15px 5px #00000004;
+}
+.registerModalContainer__modalClose:hover{
+    cursor: pointer;
+}
+.registerModalContainer__registerModal__container__emailRegister{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px #21374F solid;
+}
+
+.registerModalContainer__registerModal__container__emailRegister__emailInput{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 60px;
+    border: none;
+    appearance: none;
+    width: 230px;
+    margin-left: 48px;
+    background-color: #001935;
+    font-size: 14px;
+    outline: none;
+    padding-bottom: 6px;
+    background: 
+    linear-gradient(90deg, #4b6179c4, #4b6179c4) left bottom/100% 1.5px no-repeat;
+}
+.registerModalContainer__registerModal__container__emailRegister__emailInput:focus::placeholder{
+    color: transparent;
+}
+.registerModalContainer__registerModal__container__emailRegister__emailInput::placeholder{
+    color: #4b6179d3;
+    transition: color 0.2s ease;
+}
+.registerModalContainer__registerModal__container__emailRegister__emailInput[type=email] {
+    color: #4b6179d3; 
+    font-family: 'Roboto', sans-serif; 
+}
+
+.registerModalContainer__registerModal__container__emailRegister__passwordInput{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 40px;
+    border: none;
+    appearance: none;
+    width: 230px;
+    margin-left: 48px;
+    background-color: #001935;
+    font-size: 14px;
+    outline: none;
+    padding-bottom: 6px;
+    background: 
+    linear-gradient(90deg, #4b6179c4, #4b6179c4) left bottom/100% 1.5px no-repeat;
+}
+.registerModalContainer__registerModal__container__emailRegister__passwordInput:focus::placeholder{
+    color: transparent;
+}
+.registerModalContainer__registerModal__container__emailRegister__passwordInput::placeholder{
+    color: #4b6179d3;
+    transition: color 0.2s ease;
+}
+.registerModalContainer__registerModal__container__emailRegister__passwordInput[type=password] {
+    color: #4b6179d3;  
+    
+}
+
+
+.registerModalContainer__registerModal__container__emailRegister__passwordInput{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 40px;
+    border: none;
+    appearance: none;
+    width: 230px;
+    margin-left: 48px;
+    background-color: #001935;
+    font-size: 14px;
+    outline: none;
+    padding-bottom: 6px;
+    background: 
+    linear-gradient(90deg, #4b6179c4, #4b6179c4) left bottom/100% 1.5px no-repeat;
+}
+.registerModalContainer__registerModal__container__emailRegister__passwordInput:focus::placeholder{
+    color: transparent;
+}
+.registerModalContainer__registerModal__container__emailRegister__passwordInput::placeholder{
+    color: #4b6179d3;
+    transition: color 0.2s ease;
+}
+.registerModalContainer__registerModal__container__emailRegister__passwordInput[type=password] {
+    color: #4b6179d3;  
+    
+}
+
+
+.registerModalContainer__registerModal__container__emailRegister__confirmPasswordInput{
+  font-family: 'Roboto', sans-serif;
+  margin-top: 40px;
+  border: none;
+  appearance: none;
+  width: 230px;
+  margin-left: 48px;
+  background-color: #001935;
+  font-size: 14px;
+  outline: none;
+  padding-bottom: 6px;
+  background: 
+  linear-gradient(90deg, #4b6179c4, #4b6179c4) left bottom/100% 1.5px no-repeat;
+}
+.registerModalContainer__registerModal__container__emailRegister__confirmPasswordInput:focus::placeholder{
+  color: transparent;
+}
+.registerModalContainer__registerModal__container__emailRegister__confirmPasswordInput::placeholder{
+  color: #4b6179d3;
+  transition: color 0.2s ease;
+}
+.registerModalContainer__registerModal__container__emailRegister__confirmPasswordInput[type=password] {
+  color: #4b6179d3;  
+  
+}
+
+
+
+/*Continue with Google/Facebook*/
+.registerModalContainer__registerModal__container__socialMediaRegister{
+    width: 100%;
+    height: 145px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px #21374F solid;
+}
+.registerModalContainer__registerModal__container__socialMediaRegister__continueWithGoogleButton{
+    margin-top: 21px;
+    margin-left: 40px;
+    padding-top: 2px;
+    background-color: white; 
+    border: none;
+    color: black;
+    text-align: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 13px;
+    box-shadow: 0px 4px 15px 5px #00000025;
+    width: 255px;
+    height: 47px;
+    border-radius: 20px;
+    margin-right: 16px;
+    display: flex;
+    flex-direction: row;
+}
+.registerModalContainer__registerModal__container__socialMediaRegister__continueWithGoogleButton img{
+    margin-top: 2px;
+    margin-left: 38px;
+}
+.registerModalContainer__registerModal__container__socialMediaRegister__continueWithGoogleButton div{
+    margin-left: 5px;
+    font-size: 14px;
+    width: 150px;
+    margin-top: 1px;
+}
+
+.registerModalContainer__registerModal__container__socialMediaRegister__continueWithFacebookButton{
+    margin-top: 15px;
+    margin-left: 40px;
+    padding-top: 2px;
+    background-color: white; 
+    border: none;
+    color: black;
+    text-align: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 13px;
+    box-shadow: 0px 4px 15px 5px #00000025;
+    width: 255px;
+    height: 47px;
+    border-radius: 20px;
+    margin-right: 16px;
+    display: flex;
+    flex-direction: row;
+}
+.registerModalContainer__registerModal__container__socialMediaRegister__continueWithFacebookButton img{
+    margin-left: 33px;
+}
+.registerModalContainer__registerModal__container__socialMediaRegister__continueWithFacebookButton div{
+    margin-left: 12px;
+    font-size: 14px;
+    width: 150px;
+    margin-top: 1px;
+}
+
+
+
+/*Register*/
+.registerModalContainer__registerModal__container__container{
+    display: flex;
+    flex-direction: column;
+}
+.registerModalContainer__registerModal__container__container__registerButton{
+    margin-top: 50px;
+    margin-left: 35px;
+    background-color: #FEBC12; 
+    border: none;
+    color: white;
+    text-align: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 13px;
+    display: inline-block;
+    box-shadow: 0px 4px 15px 5px #00000025;
+    width: 255px;
+    height: 45px;
+    border-radius: 20px;
+    margin-right: 16px;
+}

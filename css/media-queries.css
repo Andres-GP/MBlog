@@ -1,0 +1,207 @@
+@media (max-width: 900px) {
+    .blogs-main-new {
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr
+    }
+    .blogs-news-img-container {
+        grid-row: 2;
+    }
+    .blogs-news-info-container {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .blogs-posts-container .post-container {
+        max-width: 45%;
+    }
+    .proyects-main-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr;
+    }
+    .profile-main-container .profile-container {
+        display: block;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .blogs-posts-container .post-container {
+        max-width: 95%;
+    }
+    .loginModalContainer__modalClose{
+        top: 29px;
+        position: absolute;
+    }
+    .registerModalContainer__modalClose{
+        top: 29px;
+        position: absolute;
+    }
+}
+
+
+
+@media (max-width: 425px) {
+    /*home header*/
+    header .header-icons-container .header__container__icons {
+        margin-top: 10px;
+    }
+    .header__container__icons{
+        margin-right: 15px;
+    }
+    header .header__container__icons span {
+        color: white;
+    }
+    /*home main*/
+    .home__container__section__text{
+        font-size: 50px;
+    }
+    /*footer*/
+    .footer__text{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    footer p {
+        color: white;
+        margin-top: 20px;
+    }
+
+    /*Modals*/
+      /*Login modal*/
+    .loginModalContainer__loginModal{
+        width: 300px;
+    }
+    .loginModalContainer__loginModal__container{
+        width: 255px;
+        margin-left: 20px;
+        margin-top: 35px;
+        border-radius: 30px;
+        border-color: #21374F;
+    }
+    .loginModalContainer__loginModal__container__emailLoginInput{
+        width: 230px;
+        margin-left: 10px;
+    }
+    .loginModalContainer__loginModal__container__passwordLoginInput{
+        width: 230px;
+        margin-left: 10px;
+    }
+    .loginModalContainer__loginModal__container__loginButton{
+        margin-left: 57px;
+    }
+
+    /*Continue with Google/Facebook*/
+    .loginModalContainer__loginModal__container__socialMediaLogin{
+         width: 100%;
+         height: 145px;
+         display: flex;
+         flex-direction: column;
+         border-bottom: 2px #21374F solid;
+    }
+    .loginModalContainer__loginModal__container__socialMediaLogin__continueWithGoogleButton{
+         margin-left: 15px;
+         padding-top: 2px;
+         width: 225px;
+    }
+    .loginModalContainer__loginModal__container__socialMediaLogin__continueWithGoogleButton img{
+         margin-top: 2px;
+         margin-left: 27px;
+    }
+    .loginModalContainer__loginModal__container__socialMediaLogin__continueWithGoogleButton div{
+         margin-left: 5px;
+         font-size: 14px;
+         width: 150px;
+         margin-top: 1px;
+    }
+
+    .loginModalContainer__loginModal__container__socialMediaLogin__continueWithFacebookButton{
+         margin-left: 15px;
+         padding-top: 2px;
+         width: 225px;
+     }
+    .loginModalContainer__loginModal__container__socialMediaLogin__continueWithFacebookButton img{
+         margin-left: 21px;
+    }
+
+    /*Create an account*/
+    .loginModalContainer__loginModal__container__text{
+         margin-left: 70px;
+    }
+    .loginModalContainer__loginModal__container__createAnAccountButton{
+         margin-left: 15px;
+         width: 225px;
+         margin-right: 16px;
+    }
+
+
+
+
+
+
+    /*Register*/
+    .registerModalContainer__registerModal{
+        width: 300px;
+    }
+    .registerModalContainer__registerModal__container{
+        width: 255px;
+        margin-left: 20px;
+        margin-top: 35px;
+        border-radius: 30px;
+        border-color: #21374F;
+    }
+    .registerModalContainer__registerModal__container__emailRegister__emailInput{
+        width: 230px;
+        margin-left: 10px;
+    }
+    .registerModalContainer__registerModal__container__emailRegister__passwordInput{
+        width: 230px;
+        margin-left: 10px;
+    }
+    .registerModalContainer__registerModal__container__emailRegister__confirmPasswordInput{
+        width: 230px;
+        margin-left: 10px;
+    }
+
+    /*Continue with Google/Facebook*/
+    .registerModalContainer__registerModal__container__socialMediaRegister{
+         width: 100%;
+         height: 145px;
+         display: flex;
+         flex-direction: column;
+         border-bottom: 2px #21374F solid;
+    }
+    .registerModalContainer__registerModal__container__socialMediaRegister__continueWithGoogleButton{
+         margin-left: 15px;
+         padding-top: 2px;
+         width: 225px;
+    }
+    .registerModalContainer__registerModal__container__socialMediaRegister__continueWithGoogleButton img{
+         margin-top: 2px;
+         margin-left: 27px;
+    }
+    .registerModalContainer__registerModal__container__socialMediaRegister__continueWithGoogleButton div{
+         margin-left: 5px;
+         font-size: 14px;
+         width: 150px;
+         margin-top: 1px;
+    }
+
+    .registerModalContainer__registerModal__container__socialMediaRegister__continueWithFacebookButton{
+         margin-left: 15px;
+         padding-top: 2px;
+         width: 225px;
+     }
+    .registerModalContainer__registerModal__container__socialMediaRegister__continueWithFacebookButton img{
+         margin-left: 21px;
+    }
+
+    /*Register*/
+    .registerModalContainer__registerModal__container__container{
+         margin-left: 0px;
+    }
+    .registerModalContainer__registerModal__container__container__registerButton{
+         margin-left: 15px;
+         width: 225px;         
+         margin-right: 16px;
+    }
+
+}
