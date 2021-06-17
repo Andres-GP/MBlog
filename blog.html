@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MBlog</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font/flaticon.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="shortcut icon" type="image/png" href="assets/img/MBlogFavIcon.png">
+</head>
+<body>
+
+
+
+
+
+
+
+    <!--Header-->
+    <header>
+        <section class="headerBlog__logoContainer">
+            <img class="headerBlog__logoContainer__logo" src="assets/img/mbloggyLogo.svg"> 
+        
+            <!--Register/login Button-->
+            <div class="headerBlog__buttonContainer">
+                <button class="headerBlog__buttonContainer__button">Register/Login</button>
+            </div>
+        </section>
+        <div class="headerBlogBottomPadding"></div>
+    </header>
+
+
+
+
+
+    <!--Blog post-->
+    <main class="blogMain">
+    </main>
+
+    
+
+
+    <!--Footer-->
+    <footer>
+        <p class="footer__text" >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </footer>
+
+
+
+    <!--Login Modal-->
+    <div class="loginModalContainer">
+        <span class="loginModalContainer__modalClose">X</span>
+        <div class="loginModalContainer__loginModal">
+            <div class="loginModalContainer__loginModal__container">
+                <div class="loginModalContainer__loginModal__container__login">
+                    <input id="loginEmail" class="loginModalContainer__loginModal__container__emailLoginInput" type="email" placeholder="E-mail:" required>
+                    <input id="loginPassword" class="loginModalContainer__loginModal__container__passwordLoginInput" type="password" placeholder="Password:" required>
+                    <a class="loginModalContainer__loginModal__container__loginButton" href="">Login</a>
+                </div>
+                <div class="loginModalContainer__loginModal__container__socialMediaLogin">
+                    <a class="loginModalContainer__loginModal__container__socialMediaLogin__continueWithGoogleButton" href="">
+                        <img src="./assets/img/google_logo.svg" alt="">
+                        <div>Continue with Google</div>
+                    </a>
+                    <a class="loginModalContainer__loginModal__container__socialMediaLogin__continueWithFacebookButton" href="">
+                        <img src="./assets/img/facebook_logo.svg" alt="">
+                        <div>Continue with Facebook</div>
+                    </a>
+                </div>
+                <div class="loginModalContainer__loginModal__container__createAnAccount">
+                    <p class="loginModalContainer__loginModal__container__text">Don’t have an account?</p>
+                    <button class="loginModalContainer__loginModal__container__createAnAccountButton">Create an account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Register Modal-->
+    <div class="registerModalContainer">
+        <span class="registerModalContainer__modalClose">X</span>
+        <div class="registerModalContainer__registerModal">
+            <div class="registerModalContainer__registerModal__container">
+                <form id="registerForm" class="registerModalContainer__registerModal__container__emailRegister">
+                    <input id="registerEmail" class="registerModalContainer__registerModal__container__emailRegister__emailInput" placeholder="E-mail" type="email" required>
+                    <input id="registerPassword" class="registerModalContainer__registerModal__container__emailRegister__passwordInput" placeholder="Password" type="password" required>
+                    <input id="registerPasswordConfirmation" class="registerModalContainer__registerModal__container__emailRegister__confirmPasswordInput" placeholder="Confirm password" type="password" required>
+                </form>
+                <div class="registerModalContainer__registerModal__container__socialMediaRegister">
+                    <a class="registerModalContainer__registerModal__container__socialMediaRegister__continueWithGoogleButton" href="">
+                        <img src="./assets/img/google_logo.svg" alt="">
+                        <div>Continue with Google</div>
+                    </a>
+                    <a class="registerModalContainer__registerModal__container__socialMediaRegister__continueWithFacebookButton" href="">
+                        <img src="./assets/img/facebook_logo.svg" alt="">
+                        <div>Continue with Facebook</div>
+                    </a>
+                </div>
+                <div class="registerModalContainer__registerModal__container__container">
+                    <button onclick="" class="registerModalContainer__registerModal__container__container__registerButton" href="">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./scripts/modals.js"></script>
+
+<!--Authentication-->
+<script src="./scripts/authentication.js"></script>
+
+
+
+
+<!--Firebase scripts-->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyACvmvwcOOI7jH3Q_8qiUTiKQhSdoxmdc0",
+    authDomain: "mblog-d3dbb.firebaseapp.com",
+    databaseURL: "https://mblog-d3dbb-default-rtdb.firebaseio.com",
+    projectId: "mblog-d3dbb",
+    storageBucket: "mblog-d3dbb.appspot.com",
+    messagingSenderId: "956217733914",
+    appId: "1:956217733914:web:49ba288ea7c03b5e5032a3",
+    measurementId: "G-717XVR5BJL"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+</html>
