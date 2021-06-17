@@ -55,6 +55,20 @@
     .home__container__section__text{
         font-size: 50px;
     }
+    /*Logged in modal*/
+    .loggedInModal{
+        width: 230px;
+    }
+    .loggedInModal__profileImageContainer{
+        margin-left: 10px;
+    }
+    .loggedInModal__logoutButton{
+        margin-left: 10px;
+        width: 80px;
+    }
+    .loggedInModal__buttonContainer__generatorButton__icon{
+        margin-left: 12px;
+    }
     /*footer*/
     .footer__text{
         padding-left: 5%;

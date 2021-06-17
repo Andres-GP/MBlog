@@ -35,10 +35,6 @@ a {
 
 
 
-
-
-
-
 /*Header*/
 
 header {
@@ -85,6 +81,68 @@ header .header__container__icons span {
     position: absolute;
     z-index: 5;
 }
+
+.loggedInModal{
+    /*opacity: 0;
+    visibility: hidden;*/
+    right: 0px;
+    position: relative;
+    height: 75px;
+    width: 300px;
+    background-color: #001935;
+    display: flex;
+    flex-direction: row;
+}
+.loggedInModal-active{
+    visibility: visible;
+    opacity: 1;
+}
+.loggedInModal__buttonContainer{
+    height: 100%;
+    width: 78px;
+}
+.loggedInModal__buttonContainer__generatorButton{
+    height: 100%;
+    width: 100%;
+}
+.loggedInModal__buttonContainer__generatorButton__icon{
+    height: 80%;
+    margin-left: 10px;
+    margin-top: 17px;
+}
+.loggedInModal__logoutButton{
+    margin-left: 15px;
+    margin-top: 20px;
+    background-color: #FEBC12; 
+    border: none;
+    color: white;
+    text-align: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 16;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 0px 4px 15px 5px #00000025;
+    padding-top: 13px;
+    width: 110px;
+    height: 33px;
+    border-radius: 24px;
+}
+.loggedInModal__profileImageContainer{
+    margin-top: 20px;
+    margin-left: 15px;
+    width: 70px;
+    height: 60%;
+    border-radius: 60px;
+}
+.loggedInModal__profileImageContainer__img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
 
 
 
@@ -356,9 +414,8 @@ footer p {
 
 
 .loginModalContainer__loginModal__container__loginButton{
-    margin-top: 40px;
+    margin-top: 35px;
     margin-left: 95px;
-    padding-top: 15px;
     background-color: #FEBC12; 
     border: none;
     color: white;
@@ -367,12 +424,13 @@ footer p {
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     font-size: 13px;
-    display: inline-block;
     box-shadow: 0px 4px 15px 5px #00000025;
     width: 140px;
-    height: 30px;
+    height: 40px;
     border-radius: 20px;
-    margin-right: 16px;
+}
+.loginModalContainer__loginModal__container__loginButton:hover{
+    cursor: pointer;
 }
 
 
@@ -547,7 +605,7 @@ footer p {
 }
 .registerModalContainer__registerModal__container__emailRegister{
     width: 100%;
-    height: 250px;
+    height: 320px;
     display: flex;
     flex-direction: column;
     border-bottom: 2px #21374F solid;
@@ -632,6 +690,31 @@ footer p {
     
 }
 
+/*Register button*/
+.registerModalContainer__registerModal__container__registerButton{
+    margin-top: 55px;
+    margin-left: 35px;
+    background-color: #FEBC12; 
+    border: none;
+    color: white;
+    text-align: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 13px;
+    display: inline-block;
+    box-shadow: 0px 4px 15px 5px #00000025;
+    width: 255px;
+    height: 45px;
+    border-radius: 20px;
+    margin-right: 16px;
+}
+.registerModalContainer__registerModal__container__registerButton:hover{
+    cursor: pointer;
+}
+
+
+
 
 
 
@@ -639,13 +722,13 @@ footer p {
 /*Continue with Google/Facebook*/
 .registerModalContainer__registerModal__container__socialMediaRegister{
     width: 100%;
-    height: 145px;
+    height: 175px;
     display: flex;
     flex-direction: column;
     border-bottom: 2px #21374F solid;
 }
 .registerModalContainer__registerModal__container__socialMediaRegister__continueWithGoogleButton{
-    margin-top: 21px;
+    margin-top: 31px;
     margin-left: 40px;
     padding-top: 2px;
     background-color: white; 
@@ -707,29 +790,3 @@ footer p {
 
 
 
-/*Register*/
-.registerModalContainer__registerModal__container__container{
-    display: flex;
-    flex-direction: column;
-}
-.registerModalContainer__registerModal__container__container__registerButton{
-    margin-top: 50px;
-    margin-left: 35px;
-    background-color: #FEBC12; 
-    border: none;
-    color: white;
-    text-align: center;
-    align-items: center;
-    font-family: 'Roboto', sans-serif;
-    text-decoration: none;
-    font-size: 13px;
-    display: inline-block;
-    box-shadow: 0px 4px 15px 5px #00000025;
-    width: 255px;
-    height: 45px;
-    border-radius: 20px;
-    margin-right: 16px;
-}
-.registerModalContainer__registerModal__container__container__registerButton:hover{
-    cursor: pointer;
-}

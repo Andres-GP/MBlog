@@ -26,3 +26,6 @@ registerModalClose.addEventListener('click', function(){
     registerModalContainer.classList.remove('registerModalContainer-active');
     loginModalContainer.classList.remove('loginModalContainer-active');
 })
+
+
+//Logged in
