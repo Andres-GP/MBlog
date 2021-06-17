@@ -83,10 +83,10 @@ header .header__container__icons span {
 }
 
 .loggedInModal{
-    /*opacity: 0;
-    visibility: hidden;*/
+    opacity: 0;
+    visibility: hidden;
     right: 0px;
-    position: relative;
+    position: absolute;
     height: 75px;
     width: 300px;
     background-color: #001935;

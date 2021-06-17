@@ -43,12 +43,6 @@ loginForm.addEventListener('submit', e => {
 
 })
 
-
-
-
-
-
-
 //Logout Event
 const logout = document.querySelector('#logoutButton')
 
