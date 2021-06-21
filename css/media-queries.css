@@ -3,10 +3,10 @@
         grid-template-columns: 1fr;
         grid-template-rows: 3fr
     }
-    .blogMain__postBackground__post{
+    .blogMain__postBackground__postGenerator{
         width: 600px;
     }
-    .blogMain__postBackground__post__titleAndDescription__textInput{
+    .blogMain__postBackground__postGenerator__titleAndDescription__textInput{
         width: 535px;
     }
     .blogs-news-img-container {
@@ -31,10 +31,10 @@
 
 
 @media (max-width: 600px) {
-    .blogMain__postBackground__post{
+    .blogMain__postBackground__postGenerator{
         width: 400px;
     }
-    .blogMain__postBackground__post__titleAndDescription__textInput{
+    .blogMain__postBackground__postGenerator__titleAndDescription__textInput{
         width: 335px;
     }
     .blogs-posts-container .post-container {
@@ -67,10 +67,10 @@
     .home__container__section__text{
         font-size: 50px;
     }
-    .blogMain__postBackground__post{
+    .blogMain__postBackground__postGenerator{
         width: 280px;
     }
-    .blogMain__postBackground__post__titleAndDescription__textInput{
+    .blogMain__postBackground__postGenerator__titleAndDescription__textInput{
         width: 250px;
         margin-left: 6.5px;
     }
@@ -193,11 +193,14 @@
         width: 230px;
         margin-left: 10px;
     }
+    .registerModalContainer__registerModal__container__registerButton{
+        margin-left: 27px;
+        width: 200px;
+    }
 
     /*Continue with Google/Facebook*/
     .registerModalContainer__registerModal__container__socialMediaRegister{
          width: 100%;
-         height: 145px;
          display: flex;
          flex-direction: column;
          border-bottom: 2px #21374F solid;

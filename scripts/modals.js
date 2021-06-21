@@ -28,4 +28,19 @@ registerModalClose.addEventListener('click', function(){
 })
 
 
-//Logged in
+//Logged in (Functionality of this modal can be found in authenticatino.js)
+var loggedInModal = document.querySelector('.loggedInModal')
+
+//Post Generator
+//Modal Open
+var postGeneratorButton = document.querySelector('.loggedInModal__buttonContainer__generatorButton');
+var postGenerator = document.querySelector('.blogMain__postBackground__postGenerator');
+postGeneratorButton.addEventListener('click', function(){
+    postGenerator.classList.add('blogMain__postBackground__postGenerator-active');
+});
+//Modal close
+var postGeneratorCloseButton = document.querySelector('.blogMain__postBackground__postGenerator__closeButton');
+postGeneratorCloseButton.addEventListener('click', function(){
+    postGenerator.classList.remove('blogMain__postBackground__postGenerator-active');
+})
+

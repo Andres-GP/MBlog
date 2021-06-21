@@ -45,6 +45,7 @@ header {
     height: 78px;
     display: grid;
     grid-template-rows: 1fr 1fr;
+    z-index: 2;
 }
 header .header__container {
     width: 100%;
@@ -88,6 +89,7 @@ header .header__container__icons span {
 .loggedInModal{
     opacity: 0;
     visibility: hidden;
+    transition: visibility 0s, opacity 0.5s;
     right: 0px;
     position: absolute;
     height: 75px;
@@ -95,10 +97,12 @@ header .header__container__icons span {
     background-color: #001935;
     display: flex;
     flex-direction: row;
+    z-index: 2;
 }
 .loggedInModal-active{
     visibility: visible;
     opacity: 1;
+    z-index: 2;
 }
 .loggedInModal__buttonContainer{
     height: 100%;
@@ -107,6 +111,11 @@ header .header__container__icons span {
 .loggedInModal__buttonContainer__generatorButton{
     height: 100%;
     width: 100%;
+    background-color: transparent;
+    border: none;
+}
+.loggedInModal__buttonContainer__generatorButton:hover{
+    cursor: pointer;
 }
 .loggedInModal__buttonContainer__generatorButton__icon{
     height: 80%;
@@ -127,10 +136,13 @@ header .header__container__icons span {
     display: inline-block;
     font-size: 16px;
     box-shadow: 0px 4px 15px 5px #00000025;
-    padding-top: 13px;
+    padding-top: 0px;
     width: 110px;
-    height: 33px;
+    height: 43px;
     border-radius: 24px;
+}
+.loggedInModal__logoutButton:hover{
+    cursor: pointer;
 }
 .loggedInModal__profileImageContainer{
     margin-top: 20px;
@@ -273,6 +285,7 @@ header .headerBlog__logoContainer__logo{
     height: 100vh;
     background-color: #001935;
     display: flex;
+    z-index: 1;
     
 }
 .blogMain__postBackground{
@@ -282,7 +295,12 @@ header .headerBlog__logoContainer__logo{
     justify-content: center;
     align-items: center;
 }
-.blogMain__postBackground__post{
+
+/*Post Generator*/
+.blogMain__postBackground__postGenerator{
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0s, opacity 0.5s;
     width:800px;
     height:600px;
     background-color: #f5f7fa;
@@ -291,7 +309,22 @@ header .headerBlog__logoContainer__logo{
     flex-direction: column;
     box-shadow: 0px 50px 30px 1px #0000002c;
 }
-.blogMain__postBackground__post__titleAndDescription{
+.blogMain__postBackground__postGenerator-active{
+    visibility: visible;
+    opacity: 1;
+}
+.blogMain__postBackground__postGenerator__closeButton{
+    font-family: 'Roboto', sans-serif;
+    color: #A6AFB8;
+    font-size: large;
+    box-shadow: 0px 4px 15px 5px #00000004;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.blogMain__postBackground__postGenerator__closeButton:hover{
+    cursor: pointer;
+}
+.blogMain__postBackground__postGenerator__titleAndDescription{
     width: 100%;
     height: 130px;
     background-color: #f5f7fa;
@@ -299,18 +332,19 @@ header .headerBlog__logoContainer__logo{
     border-top-right-radius: 25px;
     
 }
-.blogMain__postBackground__post__titleAndDescription__textInput{
+.blogMain__postBackground__postGenerator__titleAndDescription__textInput{
     border: none;
     background-color: #f5f7fa;
     width: 735px;
     height: 75px;
-    margin-top: 25px;
+    margin-top: 10px;
     margin-left: 25px;
     font-size: 17px;
+    outline: none;
     color: #A6AFB8;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-.blogMain__postBackground__post__imgOrVideo{
+.blogMain__postBackground__postGenerator__imgOrVideo{
     width: 100%;
     height: 410px;
     background-color: #efefef;
@@ -318,10 +352,16 @@ header .headerBlog__logoContainer__logo{
     align-items: center;
     justify-content: center;
 }
-.blogMain__postBackground__post__imgOrVideo__container{
+.blogMain__postBackground__postGenerator__imgOrVideo__container{
     height: 70px;
     width:  70px;
 }
+
+/*Posts List*/
+.blogMain__postBackground__postGroup{
+    list-style-type: none;
+}
+
 /*shared footer*/
 .footer__text{
     padding-left: 9%;
@@ -333,6 +373,7 @@ footer {
     background-color: #001935;
     border-top: 35px solid #47cfac;
     text-align: center;
+    z-index: 2;
 }
 footer p {
     color: white;

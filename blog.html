@@ -38,19 +38,33 @@
     <!--Blog Post-->
         <!--Posts-->
     <main class="blogMain">
+        <!--Post Generator-->
         <div class="blogMain__postBackground">
-            <div class="blogMain__postBackground__post">
-                <div class="blogMain__postBackground__post__titleAndDescription">
-                    <input placeholder="What are you thinking?" class="blogMain__postBackground__post__titleAndDescription__textInput"></input>
+            <div class="blogMain__postBackground__postGenerator">
+                <span class="blogMain__postBackground__postGenerator__closeButton">x</span>
+                <div class="blogMain__postBackground__postGenerator__titleAndDescription">
+                    <input placeholder="What are you thinking?" class="blogMain__postBackground__postGenerator__titleAndDescription__textInput"></input>
                 </div>
                 <a href="">
-                <div class="blogMain__postBackground__post__imgOrVideo">
-                    <div class="blogMain__postBackground__post__imgOrVideo__container">
-                        <img class="blogMain__postBackground__post__imgOrVideo__container__addIcon" src="./assets/img/add_icon.svg" alt="">
+                <div class="blogMain__postBackground__postGenerator__imgOrVideo">
+                    <div class="blogMain__postBackground__postGenerator__imgOrVideo__container">
+                        <img class="blogMain__postBackground__postGenerator__imgOrVideo__container__addIcon" src="./assets/img/add_icon.svg" alt="">
                     </div>
                 </div>
                 </a>
             </div>
+
+            <!--Post-->
+            <ul class="blogMain__postBackground__postGroup">
+                <li>
+                    <div>
+                        <div></div>
+                        <a href="">
+                            <div></div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
         </div>
     </main>
 
@@ -120,30 +134,33 @@
     <!--Logged in Modal-->
     <div class="loggedInModal">
         <div class="loggedInModal__buttonContainer">
-            <a id="logoutButton" class="loggedInModal__buttonContainer__generatorButton" href="">
+            <button class="loggedInModal__buttonContainer__generatorButton" href="">
                 <img class="loggedInModal__buttonContainer__generatorButton__icon" src="assets/img/post_generator.svg" alt="">
-            </a>
+            </button>
         </div>
-        <a class="loggedInModal__logoutButton" href="">Logout</a>
+        <button id="logoutButton" class="loggedInModal__logoutButton" href="">Logout</button>
         <div class="loggedInModal__profileImageContainer">
             <img class="loggedInModal__profileImageContainer__img" src="./assets/img/no_photo_profile.svg" alt="">
         </div>
     </div>
 
 </body>
+
+
 <!--Own Code-->
+<script src="./scripts/posts.js"></script>
 <script src="./scripts/modals.js"></script>
 <script src="./scripts/authentication.js"></script>
+
+
 
 <!--Firebase Scripts-->
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
-
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script><!--puede salir defecuoso aaaaaaaaaaaaaaaaaaaaaaaaa-->
-
 <script>
   // Your web app's Firebase configuration
   var firebaseConfig = {
@@ -159,8 +176,8 @@
   
   //Custom Consts
   const auth = firebase.auth();
-  const fs = cofirebase.firestore();
+  const fs = firebase.firestore();
   
-</script>
 
+</script>
 </html>

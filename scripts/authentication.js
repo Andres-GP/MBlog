@@ -15,7 +15,6 @@ registerForm.addEventListener('submit', (e) => {
         registerForm.reset();
         //Modal Close
         registerModalContainer.classList.remove('registerModalContainer-active');
-        loginModalContainer.classList.remove('loginModalContainer-active');
         
           console.log("registered")
       }) 
@@ -37,8 +36,9 @@ loginForm.addEventListener('submit', e => {
         //Modal Close
         registerModalContainer.classList.remove('registerModalContainer-active');
         loginModalContainer.classList.remove('loginModalContainer-active');
-        
-          console.log("Loged in")
+        //Add logged in modal
+        loggedInModal.classList.add('loggedInModal-active');
+        console.log("Loged in")
       }) 
 
 })
@@ -50,5 +50,6 @@ logout.addEventListener('click', e => {
   e.preventDefault();
   auth.signOut().then(() => {
     console.log("loged out")
+    loggedInModal.classList.remove('loggedInModal-active');
   })
 })
