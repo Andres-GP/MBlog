@@ -40,10 +40,15 @@
     <main class="blogMain">
         <!--Post Generator-->
         <div class="blogMain__postBackground">
-            <div class="blogMain__postBackground__postGenerator">
-                <span class="blogMain__postBackground__postGenerator__closeButton">x</span>
+            <form id="postGeneratorForm" class="blogMain__postBackground__postGenerator">
+                <div class="blogMain__postBackground__postGenerator__container">
+                    <span class="blogMain__postBackground__postGenerator__container__closeButton">x</span>
+                    <button class="blogMain__postBackground__postGenerator__container__submitButton">
+                        <img src="assets/img/submit_icon.svg" alt="">
+                    </button>
+                </div>
                 <div class="blogMain__postBackground__postGenerator__titleAndDescription">
-                    <input placeholder="What are you thinking?" class="blogMain__postBackground__postGenerator__titleAndDescription__textInput"></input>
+                    <input id="postGeneratorText" type="text" placeholder="What are you thinking?" class="blogMain__postBackground__postGenerator__titleAndDescription__textInput" autofocus></input>
                 </div>
                 <a href="">
                 <div class="blogMain__postBackground__postGenerator__imgOrVideo">
@@ -52,19 +57,11 @@
                     </div>
                 </div>
                 </a>
-            </div>
+            </form>
 
             <!--Post-->
-            <ul class="blogMain__postBackground__postGroup">
-                <li>
-                    <div>
-                        <div></div>
-                        <a href="">
-                            <div></div>
-                        </a>
-                    </div>
-                </li>
-            </ul>
+            <div id="postGroup" class="blogMain__postBackground__postGroup">
+            </div>
         </div>
     </main>
 
@@ -139,11 +136,7 @@
             </button>
         </div>
         <button id="logoutButton" class="loggedInModal__logoutButton" href="">Logout</button>
-        <div class="loggedInModal__profileImageContainer">
-            <img class="loggedInModal__profileImageContainer__img" src="./assets/img/no_photo_profile.svg" alt="">
-        </div>
     </div>
-
 </body>
 
 
@@ -156,11 +149,11 @@
 
 <!--Firebase Scripts-->
 <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script><!--puede salir defecuoso aaaaaaaaaaaaaaaaaaaaaaaaa-->
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script><!--puede salir defecuoso aaaaaaaaaaaaaaaaaaaaaaaaa-->
 <script>
   // Your web app's Firebase configuration
   var firebaseConfig = {
@@ -176,7 +169,7 @@
   
   //Custom Consts
   const auth = firebase.auth();
-  const fs = firebase.firestore();
+  const db = firebase.firestore();
   
 
 </script>

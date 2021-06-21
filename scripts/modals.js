@@ -28,7 +28,7 @@ registerModalClose.addEventListener('click', function(){
 })
 
 
-//Logged in (Functionality of this modal can be found in authenticatino.js)
+//Logged in (Functionality of this modal can be found in authentication.js)
 var loggedInModal = document.querySelector('.loggedInModal')
 
 //Post Generator
@@ -39,7 +39,7 @@ postGeneratorButton.addEventListener('click', function(){
     postGenerator.classList.add('blogMain__postBackground__postGenerator-active');
 });
 //Modal close
-var postGeneratorCloseButton = document.querySelector('.blogMain__postBackground__postGenerator__closeButton');
+var postGeneratorCloseButton = document.querySelector('.blogMain__postBackground__postGenerator__container__closeButton');
 postGeneratorCloseButton.addEventListener('click', function(){
     postGenerator.classList.remove('blogMain__postBackground__postGenerator-active');
 })

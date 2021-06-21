@@ -38,7 +38,7 @@ loginForm.addEventListener('submit', e => {
         loginModalContainer.classList.remove('loginModalContainer-active');
         //Add logged in modal
         loggedInModal.classList.add('loggedInModal-active');
-        console.log("Loged in")
+        console.log("Logged in")
       }) 
 
 })
@@ -49,7 +49,7 @@ const logout = document.querySelector('#logoutButton')
 logout.addEventListener('click', e => {
   e.preventDefault();
   auth.signOut().then(() => {
-    console.log("loged out")
+    console.log("logged out")
     loggedInModal.classList.remove('loggedInModal-active');
   })
 })

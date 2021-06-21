@@ -9,6 +9,12 @@
     .blogMain__postBackground__postGenerator__titleAndDescription__textInput{
         width: 535px;
     }
+    .post{
+        width: 535px;
+    }
+    .post__textContainer{
+        width: 535px;
+    }
     .blogs-news-img-container {
         grid-row: 2;
     }
@@ -36,6 +42,12 @@
     }
     .blogMain__postBackground__postGenerator__titleAndDescription__textInput{
         width: 335px;
+    }
+    .post{
+        width: 400px;
+    }
+    .post__textContainer{
+        width: 400px;
     }
     .blogs-posts-container .post-container {
         max-width: 95%;
@@ -74,12 +86,19 @@
         width: 250px;
         margin-left: 6.5px;
     }
+    .post{
+        width: 275px;
+    }
+    .post__textContainer{
+        width: 275px;
+    }
+    .post__textContainer__text{
+        margin-left: 12px;
+        margin-right: 12px;
+    }
     /*Logged in modal*/
     .loggedInModal{
-        width: 230px;
-    }
-    .loggedInModal__profileImageContainer{
-        margin-left: 10px;
+        width: 180px;
     }
     .loggedInModal__logoutButton{
         margin-left: 10px;

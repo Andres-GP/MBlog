@@ -93,7 +93,7 @@ header .header__container__icons span {
     right: 0px;
     position: absolute;
     height: 75px;
-    width: 300px;
+    width: 220px;
     background-color: #001935;
     display: flex;
     flex-direction: row;
@@ -144,17 +144,7 @@ header .header__container__icons span {
 .loggedInModal__logoutButton:hover{
     cursor: pointer;
 }
-.loggedInModal__profileImageContainer{
-    margin-top: 20px;
-    margin-left: 15px;
-    width: 70px;
-    height: 60%;
-    border-radius: 60px;
-}
-.loggedInModal__profileImageContainer__img{
-    width: 100%;
-    height: 100%;
-}
+
 
 
 
@@ -298,6 +288,7 @@ header .headerBlog__logoContainer__logo{
 
 /*Post Generator*/
 .blogMain__postBackground__postGenerator{
+    position: absolute;
     opacity: 0;
     visibility: hidden;
     transition: visibility 0s, opacity 0.5s;
@@ -313,7 +304,15 @@ header .headerBlog__logoContainer__logo{
     visibility: visible;
     opacity: 1;
 }
-.blogMain__postBackground__postGenerator__closeButton{
+.blogMain__postBackground__postGenerator__container{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+.blogMain__postBackground__postGenerator__container__closeButton{
     font-family: 'Roboto', sans-serif;
     color: #A6AFB8;
     font-size: large;
@@ -321,8 +320,22 @@ header .headerBlog__logoContainer__logo{
     margin-left: 20px;
     margin-top: 15px;
 }
-.blogMain__postBackground__postGenerator__closeButton:hover{
+.blogMain__postBackground__postGenerator__container__closeButton:hover{
     cursor: pointer;
+}
+.blogMain__postBackground__postGenerator__container__submitButton{
+    box-shadow: 0px 4px 15px 5px #00000004;
+    margin-right: 10px;
+    margin-top: 21px;
+    border: none;
+    background-color: transparent;
+}
+.blogMain__postBackground__postGenerator__container__submitButton:hover{
+    cursor: pointer;
+}
+.blogMain__postBackground__postGenerator__container__submitButton img{
+    width: 18px;
+    height: 18px;
 }
 .blogMain__postBackground__postGenerator__titleAndDescription{
     width: 100%;
@@ -337,7 +350,7 @@ header .headerBlog__logoContainer__logo{
     background-color: #f5f7fa;
     width: 735px;
     height: 75px;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-left: 25px;
     font-size: 17px;
     outline: none;
@@ -359,8 +372,60 @@ header .headerBlog__logoContainer__logo{
 
 /*Posts List*/
 .blogMain__postBackground__postGroup{
+    text-align: center;
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
 }
+
+
+
+/*Post*/
+.post{ 
+    transition: visibility 0s, opacity 0.5s;
+    width:800px;
+    height:600px;
+    background-color: #f5f7fa;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 50px 30px 1px #0000002c;
+}
+.post__textContainer{
+    text-align: start;
+    width: 100%;
+    height: 130px;
+    background-color: #f5f7fa;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.post__textContainer__text{
+    margin-top: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.post__imgContainer{
+    width: 100%;
+    height: 410px;
+    background-color: #efefef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.post__imgContainer img{
+    width: 100%;
+    height: 100%;
+}
+.post__imgContainer picture{
+    width: 100%;
+    height: 100%;
+}
+
+
 
 /*shared footer*/
 .footer__text{
