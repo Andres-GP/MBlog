@@ -761,7 +761,7 @@ footer p {
 }
 .registerModalContainer__registerModal__container__emailRegister{
     width: 100%;
-    height: 320px;
+    height: 460px;
     display: flex;
     flex-direction: column;
     border-bottom: 2px #21374F solid;
@@ -769,7 +769,7 @@ footer p {
 
 .registerModalContainer__registerModal__container__emailRegister__emailInput{
     font-family: 'Roboto', sans-serif;
-    margin-top: 90px;
+    margin-top: 140px;
     border: none;
     appearance: none;
     width: 230px;
@@ -869,80 +869,6 @@ footer p {
     cursor: pointer;
 }
 
-
-
-
-
-
-
-/*Continue with Google/Facebook*/
-.registerModalContainer__registerModal__container__socialMediaRegister{
-    width: 100%;
-    height: 175px;
-    display: flex;
-    flex-direction: column;
-    border-bottom: 2px #21374F solid;
-}
-.registerModalContainer__registerModal__container__socialMediaRegister__continueWithGoogleButton{
-    margin-top: 31px;
-    margin-left: 40px;
-    padding-top: 2px;
-    background-color: white; 
-    border: none;
-    color: black;
-    text-align: center;
-    align-items: center;
-    font-family: 'Roboto', sans-serif;
-    text-decoration: none;
-    font-size: 13px;
-    box-shadow: 0px 4px 15px 5px #00000025;
-    width: 255px;
-    height: 47px;
-    border-radius: 20px;
-    margin-right: 16px;
-    display: flex;
-    flex-direction: row;
-}
-.registerModalContainer__registerModal__container__socialMediaRegister__continueWithGoogleButton img{
-    margin-top: 2px;
-    margin-left: 38px;
-}
-.registerModalContainer__registerModal__container__socialMediaRegister__continueWithGoogleButton div{
-    margin-left: 5px;
-    font-size: 14px;
-    width: 150px;
-    margin-top: 1px;
-}
-
-.registerModalContainer__registerModal__container__socialMediaRegister__continueWithFacebookButton{
-    margin-top: 15px;
-    margin-left: 40px;
-    padding-top: 2px;
-    background-color: white; 
-    border: none;
-    color: black;
-    text-align: center;
-    align-items: center;
-    font-family: 'Roboto', sans-serif;
-    text-decoration: none;
-    font-size: 13px;
-    box-shadow: 0px 4px 15px 5px #00000025;
-    width: 255px;
-    height: 47px;
-    border-radius: 20px;
-    margin-right: 16px;
-    display: flex;
-    flex-direction: row;
-}
-.registerModalContainer__registerModal__container__socialMediaRegister__continueWithFacebookButton img{
-    margin-left: 33px;
-}
-.registerModalContainer__registerModal__container__socialMediaRegister__continueWithFacebookButton div{
-    margin-left: 12px;
-    font-size: 14px;
-    width: 150px;
-    margin-top: 1px;
-}
 
 
 

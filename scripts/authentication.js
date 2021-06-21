@@ -32,7 +32,7 @@ loginForm.addEventListener('submit', e => {
       .signInWithEmailAndPassword(loginEmail, loginPassword)
       .then(userCredential => {
         //Clear form
-        registerForm.reset();
+        loginForm.reset();
         //Modal Close
         registerModalContainer.classList.remove('registerModalContainer-active');
         loginModalContainer.classList.remove('loginModalContainer-active');
@@ -52,4 +52,38 @@ logout.addEventListener('click', e => {
     console.log("logged out")
     loggedInModal.classList.remove('loggedInModal-active');
   })
+})
+
+//Google login
+const googleLoginButton = document.querySelector('#googleLogin')
+googleLoginButton.addEventListener('click', e => {
+  e.preventDefault();
+  const provider = new firebase.auth.GoogleAuthProvider();
+  auth.signInWithPopup(provider)
+  .then(result => {
+    console.log("google sign in succesful")
+    //Clear form
+    loginForm.reset();
+    
+    loginModalContainer.classList.remove('loginModalContainer-active')
+    //Add logged in modal
+    loggedInModal.classList.add('loggedInModal-active');
+    console.log("Logged in")
+  })
+})
+
+//Facebook Login
+const facebookLoginButton = document.querySelector('#facebookLogin')
+facebookLoginButton.addEventListener('click', e => {
+  e.preventDefault();
+  const provider = new firebase.auth.FacebookAuthProvider();
+  auth.signInWithPopup(provider)
+  .then(result => {
+    console.log("result")
+    console.log("facebook sign in succesful")
+  })
+  //Modal Close
+  loginModalContainer.classList.remove('loginModalContainer-active')
+  //Add logged in modal
+  loggedInModal.classList.add('loggedInModal-active');
 })
