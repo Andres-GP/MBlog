@@ -43,36 +43,32 @@
             <form id="postGeneratorForm" class="blogMain__postBackground__postGenerator">
                 <div class="blogMain__postBackground__postGenerator__container">
                     <span class="blogMain__postBackground__postGenerator__container__closeButton">x</span>
-                    <button class="blogMain__postBackground__postGenerator__container__submitButton">
+                    <button onclick="uploadAndPublishFile()" id="submitAndPublishButton" class="blogMain__postBackground__postGenerator__container__submitButton">
                         <img src="assets/img/submit_icon.svg" alt="">
                     </button>
                 </div>
                 <div class="blogMain__postBackground__postGenerator__titleAndDescription">
                     <input id="postGeneratorText" type="text" placeholder="What are you thinking?" class="blogMain__postBackground__postGenerator__titleAndDescription__textInput" autofocus></input>
                 </div>
-                <a href="">
-                <div class="blogMain__postBackground__postGenerator__imgOrVideo">
+                <div class="blogMain__postBackground__postGenerator__imgOrVideo" role="button">
+                    <input type="file" class="blogMain__postBackground__postGenerator__imgOrVideo__filesInput" id="selectPostMediaInput">
+                    <img id="prePublishPostImage" class="blogMain__postBackground__postGenerator__imgOrVideo__postMedia">
                     <div class="blogMain__postBackground__postGenerator__imgOrVideo__container">
                         <img class="blogMain__postBackground__postGenerator__imgOrVideo__container__addIcon" src="./assets/img/add_icon.svg" alt="">
                     </div>
                 </div>
-                </a>
             </form>
 
             <!--Post-->
-            <div id="postGroup" class="blogMain__postBackground__postGroup">
-            </div>
+            <div id="postGroup" class="blogMain__postBackground__postGroup"></div>
         </div>
     </main>
 
-    
 
-
-    <!--Footer-->
+      <!--Footer-->
     <footer>
         <p class="footer__text" >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     </footer>
-
 
 
     <!--Login Modal-->
@@ -143,7 +139,10 @@
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script><!--puede salir defecuoso aaaaaaaaaaaaaaaaaaaaaaaaa-->
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-storage.js"></script>
+<!--<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>-->
+
 <script>
   // Your web app's Firebase configuration
   var firebaseConfig = {

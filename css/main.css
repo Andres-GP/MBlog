@@ -41,6 +41,8 @@ a {
 /*Header*/
 
 header {
+    position: fixed;
+    top: 0;
     width: 100%;
     height: 78px;
     display: grid;
@@ -91,7 +93,7 @@ header .header__container__icons span {
     visibility: hidden;
     transition: visibility 0s, opacity 0.5s;
     right: 0px;
-    position: absolute;
+    position: fixed;
     height: 75px;
     width: 220px;
     background-color: #001935;
@@ -284,16 +286,18 @@ header .headerBlog__logoContainer__logo{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 /*Post Generator*/
 .blogMain__postBackground__postGenerator{
-    position: absolute;
+    position: fixed;
+    top: 100px;
     opacity: 0;
     visibility: hidden;
     transition: visibility 0s, opacity 0.5s;
     width:800px;
-    height:600px;
+    height:550px;
     background-color: #f5f7fa;
     border-radius: 25px;
     display: flex;
@@ -359,11 +363,28 @@ header .headerBlog__logoContainer__logo{
 }
 .blogMain__postBackground__postGenerator__imgOrVideo{
     width: 100%;
-    height: 410px;
+    height: 350px;
     background-color: #efefef;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.blogMain__postBackground__postGenerator__imgOrVideo__filesInput{
+    opacity: 0;
+    position: absolute;
+    height: 350px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.blogMain__postBackground__postGenerator__imgOrVideo__postMedia{
+    width: 100%;
+    height: 350px;
+    position: absolute;
+}
+.blogMain__postBackground__postGenerator__imgOrVideo{
+    cursor: pointer;
 }
 .blogMain__postBackground__postGenerator__imgOrVideo__container{
     height: 70px;
@@ -379,16 +400,21 @@ header .headerBlog__logoContainer__logo{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    padding-bottom: 100px;
 }
 
 
 
 /*Post*/
-.post{ 
+.postContainer{
+
+}
+.postMain{ 
+    
+    margin-top: 20px;
     transition: visibility 0s, opacity 0.5s;
     width:800px;
-    height:600px;
+    height:500px;
     background-color: #f5f7fa;
     border-radius: 25px;
     display: flex;
@@ -410,15 +436,18 @@ header .headerBlog__logoContainer__logo{
 }
 .post__imgContainer{
     width: 100%;
-    height: 410px;
-    background-color: #efefef;
+    height: 350px;
+    background-color:#efefef;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 30px;
 }
-.post__imgContainer img{
+.post__imgContainer__img{
     width: 100%;
     height: 100%;
+    
+    /*background-color: magenta;*/   
 }
 .post__imgContainer picture{
     width: 100%;
@@ -428,25 +457,25 @@ header .headerBlog__logoContainer__logo{
 
 
 /*shared footer*/
-.footer__text{
-    padding-left: 9%;
-    padding-right: 9%;
-}
 footer {
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    height: 80px;
+    height: 50px;
     background-color: #001935;
-    border-top: 35px solid #47cfac;
+    border-top: 15px solid #47cfac;
     text-align: center;
     z-index: 2;
 }
 footer p {
     color: white;
-    margin-top: 30px;
+    margin-top: 15px;
+    font-size: 14px;
 }
-
-
-
+.footer__text{
+    padding-left: 9%;
+    padding-right: 9%;
+}
 
 
 
