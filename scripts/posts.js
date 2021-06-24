@@ -47,59 +47,40 @@ postGeneratorForm.addEventListener('submit', async (e) => {
     console.log('data sent')
 })
 
-/*
-//Upload and publish image
-var ImgName, ImgUrl;
+
+//Select and preview image
 var files = [];
 
-document.getElementById('selectPostMedia').onclick = function (e) {
-    var input = document.createElement('input');
-    input.type='file';
-
-    input.onchange = e => {
+document.getElementById('selectPostMediaInput').onchange = function (e){
         files = e.target.files;
         reader = new FileReader();
         reader.onload = function(){
-            document.getElementById('prePublishPostImage').src = reader.result;
+            var previewField = document.getElementById('prePublishPostImage')
+            previewField.src = reader.result;
         }
         reader.readAsDataURL(files[0]);
     }
-    input.click();
-}
 
-document.getElementById('submitAndPublishButton').onclick = function(){
-    ImgName = document.getElementById('postGeneratorText').value;
-    var uploadMedia = firebase.storage().ref('Images/'+ImgName+".png").put(files[0]);
 
-    uploadMedia.on('state_changed',
-    function uploadData (){
-        uploadMedia.snapshot.ref.getDownloadURL().then(function(url){
-            ImgUrl = url;
+//Submit image & generate image URL
+var submitButton = document.getElementById('selectPostMediaInput');
 
-        firebase.database().ref('Pictures/'+ImgName).set({
-            Name: ImgName,
-            Link: ImgUrl
-        });
-          alert('image added succesfully')
-         }
-       );
-    });   
-}
+submitButton.addEventListener('change', function submitImg(e){
+    var file = e.target.files[0];
+    var storageRef = firebase.storage().ref('PostsImgs/' + file.name);
+    var task = storageRef.put(file);
+    console.log('media sent');
 
-*/
-
-async function uploadAndPublishFile() {
-    inputFile = document.getElementById("selectPostMedia");
-    if (inputFile.files.length == 0) {
-        alert("Please select an image or video");
-        return
-    } else {
-        let file = inputFile.files[0];
-        let storageRef = firebase.storage().ref(file.name);
-        await storageRef.put(file);
-        console.log("Download done");
-    }
-}
+    task.snapshot.ref.getDownloadURL()
+     .then(function imgURL(url) {
+        console.log(url)
+        sessionStorage.setItem('newPostImg', url)
+    })
+})
 
 
 
+
+
+
+//3.Mandar la url producida en (Submit image & generate image URL) al src de la imagen del innerHTML

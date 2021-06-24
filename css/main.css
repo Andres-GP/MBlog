@@ -369,6 +369,7 @@ header .headerBlog__logoContainer__logo{
     align-items: center;
     justify-content: center;
 }
+
 .blogMain__postBackground__postGenerator__imgOrVideo__filesInput{
     opacity: 0;
     position: absolute;
@@ -377,10 +378,14 @@ header .headerBlog__logoContainer__logo{
     background-color: transparent;
     border: none;
     outline: none;
+    z-index: 2;
+}
+.blogMain__postBackground__postGenerator__imgOrVideo__filesInput:hover{
+    cursor: pointer;
 }
 .blogMain__postBackground__postGenerator__imgOrVideo__postMedia{
-    width: 100%;
-    height: 350px;
+    border-radius: 25px;
+    height: 330px;
     position: absolute;
 }
 .blogMain__postBackground__postGenerator__imgOrVideo{
@@ -407,7 +412,7 @@ header .headerBlog__logoContainer__logo{
 
 /*Post*/
 .postContainer{
-
+ /*SEGUIR*/
 }
 .postMain{ 
     
