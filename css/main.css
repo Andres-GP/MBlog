@@ -308,6 +308,10 @@ header .headerBlog__logoContainer__logo{
     visibility: visible;
     opacity: 1;
 }
+.blogMain__postBackground__container{
+    position: fixed;
+    z-index: 50;
+}
 .blogMain__postBackground__postGenerator__container{
     display: flex;
     flex-direction: row;

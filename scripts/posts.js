@@ -48,6 +48,8 @@ postGeneratorForm.addEventListener('submit', async (e) => {
 })
 
 
+
+
 //Select and preview image
 var files = [];
 
@@ -63,24 +65,31 @@ document.getElementById('selectPostMediaInput').onchange = function (e){
 
 
 //Submit image & generate image URL
+var ImgName, ImgUrl
+var uploader = document.getElementById('progressBar');
 var submitButton = document.getElementById('selectPostMediaInput');
 
-submitButton.addEventListener('change', function submitImg(e){
+submitButton.addEventListener('change', function (e){
     var file = e.target.files[0];
-    var storageRef = firebase.storage().ref('PostsImgs/' + file.name);
+    ImgName = file.name;
+    var storageRef = firebase.storage().ref('PostsImgs/' + ImgName);
     var task = storageRef.put(file);
-    console.log('media sent');
-
-    task.snapshot.ref.getDownloadURL()
-     .then(function imgURL(url) {
-        console.log(url)
-        sessionStorage.setItem('newPostImg', url)
-    })
+    //Progress bar
+    task.on('state_changed',
+       function progress(snapshot){
+           var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+           uploader.value = percentage;
+       },
+        task.snapshot.ref.getDownloadURL().then(url =>  {
+           console.log(url)
+           url = url
+           //Retrieve Image
+           document.getElementById('submitAndPublishButton').onclick = function(){
+            document.getElementById('postImg').src=url;
+        } 
+       })
+    )
 })
-
-
-
-
 
 
 //3.Mandar la url producida en (Submit image & generate image URL) al src de la imagen del innerHTML
