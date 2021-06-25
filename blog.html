@@ -30,6 +30,7 @@
         </section>
         <div class="headerBlogBottomPadding"></div>
     </header>
+    <div class="headerSpacer"></div>
 
 
 
@@ -50,19 +51,7 @@
                 <div class="blogMain__postBackground__postGenerator__titleAndDescription">
                     <input id="postGeneratorText" type="text" placeholder="What are you thinking?" class="blogMain__postBackground__postGenerator__titleAndDescription__textInput" autofocus></input>
                 </div>
-                <div class="blogMain__postBackground__postGenerator__imgOrVideo" role="button">
-                    <input type="file" class="blogMain__postBackground__postGenerator__imgOrVideo__filesInput" id="selectPostMediaInput">
-                    <img id="prePublishPostImage" class="blogMain__postBackground__postGenerator__imgOrVideo__postMedia">
-                    <div class="blogMain__postBackground__postGenerator__imgOrVideo__container">
-                        <img class="blogMain__postBackground__postGenerator__imgOrVideo__container__addIcon" src="./assets/img/add_icon.svg" alt="">
-                    </div>
-                </div>
             </form>
-
-            <!--Progress Bar Modal-->
-            <div class="blogMain__postBackground__container">
-                <progress id="progressBar" value="0" class="blogMain__postBackground__container__progressBar">0%</progress>
-            </div>
 
             <!--Post-->
             <div id="postGroup" class="blogMain__postBackground__postGroup"></div>
@@ -71,9 +60,11 @@
 
 
       <!--Footer-->
+      <div class="footerSpacer"></div>
     <footer>
         <p class="footer__text" >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     </footer>
+
 
 
     <!--Login Modal-->
@@ -146,6 +137,7 @@
 <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
 
 <script>
   // Your web app's Firebase configuration

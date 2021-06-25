@@ -4,12 +4,12 @@
         grid-template-rows: 3fr
     }
     .blogMain__postBackground__postGenerator{
-        width: 600px;
+        width:/*410px;*/ 80%;
     }
     .blogMain__postBackground__postGenerator__titleAndDescription__textInput{
-        width: 535px;
+        width: /*360px;*/ 70%;
     }
-    .post{
+    .postMain{
         width: 535px;
     }
     .post__textContainer{
@@ -37,20 +37,23 @@
 
 
 @media (max-width: 600px) {
-    .blogMain__postBackground__postGenerator{
-        width: 400px;
-    }
-    .blogMain__postBackground__postGenerator__titleAndDescription__textInput{
-        width: 335px;
-    }
-    .post{
+    .postMain{
         width: 400px;
     }
     .post__textContainer{
         width: 400px;
     }
+    .post__textContainer__text{
+        margin-top: 30px;
+    }
     .blogs-posts-container .post-container {
         max-width: 95%;
+    }
+    .blogMain__postBackground__postGenerator{
+        width:410px;
+    }
+    .blogMain__postBackground__postGenerator__titleAndDescription__textInput{
+        width: 360px;
     }
     .loginModalContainer__modalClose{
         top: 29px;
@@ -80,13 +83,15 @@
         font-size: 50px;
     }
     .blogMain__postBackground__postGenerator{
-        width: 280px;
+        width:300px;
     }
     .blogMain__postBackground__postGenerator__titleAndDescription__textInput{
         width: 250px;
-        margin-left: 6.5px;
     }
-    .post{
+    .postContainer{
+        margin: 0px;
+    }
+    .postMain{
         width: 275px;
     }
     .post__textContainer{
@@ -95,6 +100,7 @@
     .post__textContainer__text{
         margin-left: 12px;
         margin-right: 12px;
+        margin-top: 10px;
     }
     /*Logged in modal*/
     .loggedInModal{
@@ -260,3 +266,4 @@
     }
 
 }
+

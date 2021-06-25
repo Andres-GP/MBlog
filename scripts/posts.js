@@ -21,9 +21,6 @@ window.addEventListener('DOMContentLoaded', async (e) => {
                    <div class="post__textContainer">
                      <p class="post__textContainer__text">${doc.data().postText}</p>
                    </div>
-                   <div class="post__imgContainer">
-                      <img id="postImg" class="post__imgContainer__img">
-                   </div>
                </div> 
             </div>
             `;
@@ -48,48 +45,3 @@ postGeneratorForm.addEventListener('submit', async (e) => {
 })
 
 
-
-
-//Select and preview image
-var files = [];
-
-document.getElementById('selectPostMediaInput').onchange = function (e){
-        files = e.target.files;
-        reader = new FileReader();
-        reader.onload = function(){
-            var previewField = document.getElementById('prePublishPostImage')
-            previewField.src = reader.result;
-        }
-        reader.readAsDataURL(files[0]);
-    }
-
-
-//Submit image & generate image URL
-var ImgName, ImgUrl
-var uploader = document.getElementById('progressBar');
-var submitButton = document.getElementById('selectPostMediaInput');
-
-submitButton.addEventListener('change', function (e){
-    var file = e.target.files[0];
-    ImgName = file.name;
-    var storageRef = firebase.storage().ref('PostsImgs/' + ImgName);
-    var task = storageRef.put(file);
-    //Progress bar
-    task.on('state_changed',
-       function progress(snapshot){
-           var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-           uploader.value = percentage;
-       },
-        task.snapshot.ref.getDownloadURL().then(url =>  {
-           console.log(url)
-           url = url
-           //Retrieve Image
-           document.getElementById('submitAndPublishButton').onclick = function(){
-            document.getElementById('postImg').src=url;
-        } 
-       })
-    )
-})
-
-
-//3.Mandar la url producida en (Submit image & generate image URL) al src de la imagen del innerHTML
