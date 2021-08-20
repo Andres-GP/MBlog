@@ -878,6 +878,7 @@ footer p {
 }
 
 .registerModalContainer__registerModal__container__registerButtonss{
+    cursor: pointer;
 }
 
 
